@@ -51,7 +51,6 @@ public class GameView extends View implements TimerAction, View.OnTouchListener 
         // Chargement des feuilles de sprites
         this.id = R.mipmap.hex;
         SpriteSheet.register(id,2,3,this.getContext());
-//        SpriteSheet.register(R.drawable.car,3,1,this.getContext());
 
         // Création des différents éléments à afficher dans la vue
         board = new Board(R.mipmap.hex,5);
@@ -105,23 +104,16 @@ public class GameView extends View implements TimerAction, View.OnTouchListener 
 
         // Dessin des différents éléments
         board.paint(canvas);
-//        track.paint(canvas);
-//        car.paint(canvas,track.getTileWidth(),track.getTileHeight());
-
-
-
     }
 
     private void setCamera(Canvas canvas) {
         updateTransform();
-
-
         canvas.concat(matrix);
-
     }
 
     private void updateTransform() {
-        // On calcul le facteur de zoom
+        // On calcule la matrice avec setRectToRect
+        // le rectangle drawableRect sera envoyé sur viewRect, centré, et avec une taille maximale
 
         RectF drawableRect = new RectF(0, 0,
                 board.coordinate.getXTotalSize(),
@@ -134,7 +126,6 @@ public class GameView extends View implements TimerAction, View.OnTouchListener 
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-//        Log.d("GameView",event.toString());
         if (event.getAction() == MotionEvent.ACTION_UP ||
                 event.getAction() == MotionEvent.ACTION_DOWN ||
                 event.getAction() == MotionEvent.ACTION_MOVE){
@@ -143,9 +134,10 @@ public class GameView extends View implements TimerAction, View.OnTouchListener 
             float x =  coord[0];
             float y =  coord[1];
 
-            if (event.getAction() == MotionEvent.ACTION_UP)
-                board.playIfValid(x,y);
-            this.invalidate();
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                board.playIfValid(x, y);
+                this.invalidate();
+            }
             return true;
         }
         return false;
