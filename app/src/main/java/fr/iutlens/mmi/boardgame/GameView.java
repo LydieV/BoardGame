@@ -3,6 +3,7 @@ package fr.iutlens.mmi.boardgame;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
+import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -20,6 +21,7 @@ public class GameView extends View implements TimerAction, View.OnTouchListener 
     private Board board;
     private Matrix matrix;
     private Matrix inverse;
+    private int id;
 
     public GameView(Context context) {
         super(context);
@@ -47,11 +49,12 @@ public class GameView extends View implements TimerAction, View.OnTouchListener 
     private void init(AttributeSet attrs, int defStyle) {
 
         // Chargement des feuilles de sprites
-        SpriteSheet.register(R.mipmap.goban,2,4,this.getContext());
+        this.id = R.mipmap.hex;
+        SpriteSheet.register(id,2,3,this.getContext());
 //        SpriteSheet.register(R.drawable.car,3,1,this.getContext());
 
         // Création des différents éléments à afficher dans la vue
-        board = new Board(9);
+        board = new Board(R.mipmap.hex,5);
         board.setGameView(this);
 
 
@@ -119,25 +122,12 @@ public class GameView extends View implements TimerAction, View.OnTouchListener 
 
     private void updateTransform() {
         // On calcul le facteur de zoom
-        float tiles_x = (1.0f*getWidth())/ SpriteSheet.get(R.mipmap.goban).w;
-        float tiles_y =  (1.0f*getHeight())/SpriteSheet.get(R.mipmap.goban).h;
-        float min_tiles = Math.min(tiles_x,tiles_y);
-        float scale = (min_tiles)/board.getSize();
 
-
-        matrix.setTranslate(getWidth()/2,getHeight()/2);
-
-        // La suite de transfomations est à interpréter "à l'envers"
-
-        // On termine par un centrage de l'origine (le milieu) dans la fenêtre
-
-        // On mets à l'échelle calculée au dessus
-        matrix.preScale(scale, scale);
-
-        // On centre sur le milieu du plateau de jeu
-        matrix.preTranslate(-SpriteSheet.get(R.mipmap.goban).w*board.getSize()/2.0f,
-                -SpriteSheet.get(R.mipmap.goban).h*board.getSize()/2.0f
-                );
+        RectF drawableRect = new RectF(0, 0,
+                board.coordinate.getXTotalSize(),
+                board.coordinate.getYTotalSize());
+        RectF viewRect = new RectF(0, 0, getWidth(), getHeight());
+        matrix.setRectToRect(drawableRect, viewRect, Matrix.ScaleToFit.CENTER);
         matrix.invert(inverse);
     }
 
@@ -150,13 +140,11 @@ public class GameView extends View implements TimerAction, View.OnTouchListener 
                 event.getAction() == MotionEvent.ACTION_MOVE){
             float[] coord = {event.getX(), event.getY()};
             inverse.mapPoints(coord);
-            float x =  (coord[0]/SpriteSheet.get(R.mipmap.goban).w);
-            float y =  (coord[1]/SpriteSheet.get(R.mipmap.goban).h);
+            float x =  coord[0];
+            float y =  coord[1];
 
             if (event.getAction() == MotionEvent.ACTION_UP)
                 board.playIfValid(x,y);
-            else
-                board.highlight(x,y);
             this.invalidate();
             return true;
         }
