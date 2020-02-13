@@ -9,15 +9,15 @@
         android:roundIcon="@mipmap/icone_lancement"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".AccueilActivity">
+        <activity android:name=".MainActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".AccueilActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PerduActivity"></activity>
+        <activity android:name=".PerduActivity" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
