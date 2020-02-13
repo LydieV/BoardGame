@@ -2,9 +2,9 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@mipmap/image_fond"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/image_fond"
     tools:context="fr.iutlens.mmi.boardgame.AccueilActivity">
 
     <android.support.design.button.MaterialButton
@@ -14,7 +14,7 @@
         android:layout_marginBottom="132dp"
         android:layout_marginTop="8dp"
         android:background="#D6D8D7"
-        android:fontFamily="@font/lemondrop"
+        android:fontFamily="@font/lemondropf"
         android:text="@string/play"
         android:textAllCaps="true"
         android:textSize="25sp"
@@ -33,7 +33,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/gravity_regular"
+        android:fontFamily="@font/gravityf"
         android:text="@string/game_inspired_by_number_connect"
         android:textAllCaps="true"
         app:layout_constraintBottom_toBottomOf="parent"

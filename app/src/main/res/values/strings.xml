@@ -13,4 +13,6 @@
     <string name="over">over</string>
     <string name="replay">Replay</string>
     <string name="home">Home</string>
+    <string name="instructions">Instructions</string>
+    <string name="create_a_group_of_4_same_boxes_to_upgrade_and_finish_by_the_last_one_the_france">Create a group of 4 same boxes to upgrade and finish by the last one : the France.</string>
 </resources>
