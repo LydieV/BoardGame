@@ -5,7 +5,7 @@
     android:background="@mipmap/image_fond"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fr.iutlens.mmi.boardgame.AccueilActivity">
+    tools:context="fr.iutlens.mmi.buildthefrance.AccueilActivity">
 
     <android.support.design.button.MaterialButton
         android:id="@+id/button"

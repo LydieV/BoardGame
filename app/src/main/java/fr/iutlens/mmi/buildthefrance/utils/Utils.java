@@ -1,4 +1,4 @@
-package fr.iutlens.mmi.boardgame.utils;
+package fr.iutlens.mmi.buildthefrance.utils;
 
 import android.content.Context;
 import android.graphics.Bitmap;

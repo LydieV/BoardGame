@@ -1,4 +1,4 @@
-package fr.iutlens.mmi.boardgame;
+package fr.iutlens.mmi.buildthefrance;
 
 import org.junit.Test;
 

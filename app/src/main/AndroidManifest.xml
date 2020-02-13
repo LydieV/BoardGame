@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="fr.iutlens.mmi.boardgame">
+    package="fr.iutlens.mmi.buildthefrance">
 
     <application
         android:allowBackup="true"
@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="fr.iutlens.mmi.buildthefrance.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AccueilActivity"
+            android:name="fr.iutlens.mmi.buildthefrance.AccueilActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,9 +22,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PerduActivity"
+            android:name="fr.iutlens.mmi.buildthefrance.PerduActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".InstructionsActivity"></activity>
+        <activity android:name="fr.iutlens.mmi.buildthefrance.InstructionsActivity"></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package fr.iutlens.mmi.boardgame;
+package fr.iutlens.mmi.buildthefrance;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,9 +10,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
-import fr.iutlens.mmi.boardgame.utils.RefreshHandler;
-import fr.iutlens.mmi.boardgame.utils.SpriteSheet;
-import fr.iutlens.mmi.boardgame.utils.TimerAction;
+import fr.iutlens.mmi.buildthefrance.utils.RefreshHandler;
+import fr.iutlens.mmi.buildthefrance.utils.SpriteSheet;
+import fr.iutlens.mmi.buildthefrance.utils.TimerAction;
 
 
 public class GameView extends View implements TimerAction, View.OnTouchListener {

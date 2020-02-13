@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/image_fond"
-    tools:context="fr.iutlens.mmi.boardgame.PerduActivity">
+    tools:context="fr.iutlens.mmi.buildthefrance.PerduActivity">
 
     <TextView
         android:id="@+id/textView2"

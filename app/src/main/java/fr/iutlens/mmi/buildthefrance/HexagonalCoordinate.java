@@ -1,7 +1,7 @@
-package fr.iutlens.mmi.boardgame;
+package fr.iutlens.mmi.buildthefrance;
 
 
-import fr.iutlens.mmi.boardgame.utils.SpriteSheet;
+import fr.iutlens.mmi.buildthefrance.utils.SpriteSheet;
 
 /**
  * Gestion des coordonnées sur une grille hexagonale

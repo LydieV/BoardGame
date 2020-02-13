@@ -1,6 +1,5 @@
-package fr.iutlens.mmi.boardgame;
+package fr.iutlens.mmi.buildthefrance;
 
-import android.content.Intent;
 import android.graphics.Canvas;
 import android.view.View;
 
@@ -8,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Vector;
 
-import fr.iutlens.mmi.boardgame.utils.SpriteSheet;
+import fr.iutlens.mmi.buildthefrance.utils.SpriteSheet;
 
 
 

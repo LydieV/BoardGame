@@ -1,4 +1,4 @@
-package fr.iutlens.mmi.boardgame;
+package fr.iutlens.mmi.buildthefrance;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

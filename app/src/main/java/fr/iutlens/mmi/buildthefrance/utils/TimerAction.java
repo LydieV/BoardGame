@@ -1,4 +1,4 @@
-package fr.iutlens.mmi.boardgame.utils;
+package fr.iutlens.mmi.buildthefrance.utils;
 
 /**
  * Created by dubois on 27/12/2017.
