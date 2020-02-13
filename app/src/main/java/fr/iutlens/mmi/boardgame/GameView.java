@@ -1,15 +1,14 @@
 package fr.iutlens.mmi.boardgame;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.RectF;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-
-import java.io.Console;
+import android.widget.TextView;
 
 import fr.iutlens.mmi.boardgame.utils.RefreshHandler;
 import fr.iutlens.mmi.boardgame.utils.SpriteSheet;
@@ -22,6 +21,7 @@ public class GameView extends View implements TimerAction, View.OnTouchListener 
     private Matrix matrix;
     private Matrix inverse;
     private int id;
+    private TextView scoreView;
 
     public GameView(Context context) {
         super(context);
@@ -49,11 +49,11 @@ public class GameView extends View implements TimerAction, View.OnTouchListener 
     private void init(AttributeSet attrs, int defStyle) {
 
         // Chargement des feuilles de sprites
-        this.id = R.mipmap.hex;
-        SpriteSheet.register(id,2,3,this.getContext());
+        this.id = R.mipmap.pions_ensemble;
+        SpriteSheet.register(id,5,4,this.getContext());
 
         // Création des différents éléments à afficher dans la vue
-        board = new Board(R.mipmap.hex,5);
+        board = new Board(id,5);
         board.setGameView(this);
 
 
@@ -96,7 +96,7 @@ public class GameView extends View implements TimerAction, View.OnTouchListener 
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         // On met une couleur de fond
-        canvas.drawColor(0xff000000);
+        canvas.drawColor(0xffffffff);
 
         // On choisit la transformation à appliquer à la vue i.e. la position
         // de la "camera"
@@ -137,9 +137,27 @@ public class GameView extends View implements TimerAction, View.OnTouchListener 
             if (event.getAction() == MotionEvent.ACTION_UP) {
                 board.playIfValid(x, y);
                 this.invalidate();
+                if (board.perdu){
+                    Intent intent = new Intent(getContext(),PerduActivity.class);
+                    intent.putExtra("score",board.getScore());
+                    getContext().startActivity(intent);
+
+                }
+                if (scoreView != null){
+                    scoreView.setText("Score : "+board.getScore());
+                }
             }
             return true;
         }
         return false;
+    }
+
+
+    public void setScoreView(TextView scoreView) {
+        this.scoreView = scoreView;
+    }
+
+    public TextView getScoreView() {
+        return scoreView;
     }
 }

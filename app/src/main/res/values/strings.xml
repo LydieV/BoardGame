@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Mini Go</string>
+    <string name="go_to">Go to</string>
+    <string name="jouer">jouer</string>
+    <string name="score">Score :</string>
+    <string name="_0">0</string>
+    <string name="score_0">Score : 0</string>
+    <string name="logo">logo</string>
+    <string name="play">play</string>
+    <string name="game_inspired_by_number_connect">Game inspired by Number connect</string>
+    <string name="oops">oops</string>
+    <string name="game">game</string>
+    <string name="over">over</string>
+    <string name="replay">Replay</string>
+    <string name="home">Home</string>
 </resources>
