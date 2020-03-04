@@ -2,27 +2,27 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@mipmap/image_fond"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/image_fond"
     tools:context="fr.iutlens.mmi.buildthefrance.AccueilActivity">
 
     <android.support.design.button.MaterialButton
         android:id="@+id/button"
         android:layout_width="247dp"
         android:layout_height="78dp"
-        android:layout_marginBottom="132dp"
+        android:layout_marginBottom="8dp"
         android:background="#D6D8D7"
         android:fontFamily="@font/lemondropf"
         android:text="@string/play"
         android:textAllCaps="true"
         android:textSize="25sp"
         app:cornerRadius="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttoninstruc"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.595" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
         android:id="@+id/textView"
@@ -44,25 +44,31 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="0dp"
-        android:layout_height="446dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="@dimen/marge_image"
         android:layout_marginStart="@dimen/marge_image"
-        android:layout_marginTop="30dp"
+        android:layout_marginLeft="@dimen/marge_image"
+        android:layout_marginRight="@dimen/marge_image"
+        android:layout_marginTop="60dp"
         android:contentDescription="@string/logo"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
         app:srcCompat="@mipmap/logo" />
 
     <android.support.design.button.MaterialButton
         android:id="@+id/buttoninstruc"
         android:layout_width="247dp"
         android:layout_height="78dp"
+        android:layout_marginBottom="@dimen/marginButtonInstru"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:background="#D6D8D7"
         android:fontFamily="@font/lemondropf"
@@ -70,7 +76,9 @@
         android:textAllCaps="true"
         android:textSize="22sp"
         app:cornerRadius="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
