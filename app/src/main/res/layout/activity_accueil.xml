@@ -48,7 +48,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="@dimen/marge_image"
         android:layout_marginStart="@dimen/marge_image"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="30dp"
         android:contentDescription="@string/logo"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
