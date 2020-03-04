@@ -92,6 +92,8 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/lemondropf"
         android:text="@string/retour"
