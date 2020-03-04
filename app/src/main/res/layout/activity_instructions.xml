@@ -22,13 +22,50 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="265dp"
-        android:layout_height="213dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="148dp"
+        android:layout_width="539dp"
+        android:layout_height="109dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="68dp"
         android:fontFamily="@font/gravity_regular"
         android:text="@string/create_a_group_of_4_same_boxes_to_upgrade_and_finish_by_the_last_one_the_france"
         android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="255dp"
+        android:layout_height="193dp"
+        android:layout_marginEnd="172dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:srcCompat="@mipmap/instruction_1"
+        android:contentDescription="@string/imageinstru1" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="95dp"
+        android:layout_height="146dp"
+        android:layout_marginEnd="252dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@mipmap/instruction_2"
+        android:contentDescription="@string/imageinstru2" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="108dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="244dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/instruction_3"
+        android:contentDescription="@string/imageinstru3" />
 </android.support.constraint.ConstraintLayout>

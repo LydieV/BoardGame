@@ -58,4 +58,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/logo" />
 
+    <android.support.design.button.MaterialButton
+        android:id="@+id/buttoninstruc"
+        android:layout_width="247dp"
+        android:layout_height="78dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#D6D8D7"
+        android:fontFamily="@font/lemondropf"
+        android:text="@string/instructions"
+        android:textAllCaps="true"
+        android:textSize="22sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
 </android.support.constraint.ConstraintLayout>

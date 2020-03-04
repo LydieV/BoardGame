@@ -20,6 +20,20 @@ public class AccueilActivity extends AppCompatActivity {
                 jouer(view);
             }
         });
+
+        View view1 = findViewById(R.id.buttoninstruc);
+        view1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view1){
+                instruc(view1);
+            }
+        });
+    }
+
+    private void instruc(View view1) {
+        Button button1 = (Button) findViewById(R.id.buttoninstruc);
+        Intent intent1 = new Intent (this, InstructionsActivity.class);
+        startActivity(intent1);
     }
 
     public void jouer(View view) {
